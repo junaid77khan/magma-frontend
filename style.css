@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    background-color: #0942E1;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    background-color: #1238CB;
+}
+
+/* Responsive Navigation */
+.page1 > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    height: auto;
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.page1 > nav > p {
+    font-size: 1rem;
+}
+
+.nav-btn1, .nav-btn2 {
+    background-color: transparent;
+    font-size: 0.8rem;
+    border: 2px solid rgba(255, 255, 255, 0.342);
+    padding: 0.5rem 1rem;
+    border-radius: 6rem;
+    color: white;
+    margin-right: 0.5rem;
+    transition: 0.5s all ease;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-btn1, .nav-btn2 {
+        margin-top: 10rem;
+    }
+}
+
+/* Responsive Page Content */
+.page1-main {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 99;
+    width: 90%;
+    max-width: 40rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.page1-main > h1 {
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    font-weight: 300;
+    color: white;
+    line-height: 1.2;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.flex > p {
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.flex > button {
+    background-color: white;
+    color: #0A43E4;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Responsive Pages */
+.page2, .page4, .page6 {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0B44E5;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+}
+
+.page2 h4, .page4 h4, .page6 h4 {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.page2 > h1, .page4 > h1, .page6 > h1 {
+    line-height: 1.2;
+    font-weight: 360;
+    font-size: clamp(2rem, 8vw, 4rem);
+    letter-spacing: -2px;
+    color: #dadada69;
+}
+
+.page3, .page5 {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page3 > canvas, .page5 > canvas {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media screen and (max-width: 768px) {
+    .page1 > nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-btn1, .nav-btn2 {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .page1-main {
+        bottom: 5%;
+        left: 5%;
+    }
+
+    .flex {
+        gap: 1rem;
+    }
+
+    .flex > button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page1 > nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-btn1, .nav-btn2 {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+
+    .page2, .page4, .page6 {
+        padding: 3rem 1rem;
+    }
+}
